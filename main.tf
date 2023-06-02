@@ -1,8 +1,8 @@
 provider "aws" {
-  region     = "eu-central-1"
+  region     = "us-east-1"
   shared_credentials_files = ["/Users/rahulwagh/.aws/credentials"]
   resource "aws_instance" "ec2_example" {
-  ami           = "ami-0767046d1677be5a0"
+  ami           = "ami-0715c1897453cabd1"
   instance_type =  "t2.micro"
   tags = {
     Name = "Terraform EC2 "
@@ -11,6 +11,6 @@ provider "aws" {
   # The following null resource will print message "Hello World"
 resource "null_resource" "null_resource_simple" {
   provisioner "local-exec" {
-    command = "echo Hello World"
+    command = "Wagwan World"
   }
 }
